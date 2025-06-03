@@ -1,0 +1,49 @@
+#include <stdio.h>
+void F(int n)
+{
+    if(n<1)
+    {
+        return;
+    }
+    F(n/16);
+    n=n%16;
+    if(n==10)
+    {
+        printf("A");
+    }
+    if(n==11)
+    {
+        printf("B");
+    }
+    if(n==12)
+    {
+        printf("C");
+    }
+    if(n==13)
+    {
+        printf("D");
+    }
+    if(n==14)
+    {
+        printf("E");
+    }
+    if(n==15)
+    {
+        printf("F");
+    }
+    else
+    {
+        printf("%d",n);
+    }
+    n=(16*n)+(n%16);
+}
+int main()
+{
+    int k;
+    scanf("%d",&k);
+    if(k==0)
+    {
+        printf("0");
+    }
+    F(k);
+}
